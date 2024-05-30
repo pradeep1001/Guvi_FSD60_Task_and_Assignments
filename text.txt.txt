@@ -1,0 +1,13 @@
+git config --list
+git config --global user.name "GitHub_user_name_here"
+git config --global user.email "GitHub_email_address_here"
+
+git config --list
+
+git init
+
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pradeep1001/Task_Learning_FSD60_2nd_Approach.git
+git push -u origin main
