@@ -1,9 +1,3 @@
-git config --list
-git config --global user.name "GitHub_user_name_here"
-git config --global user.email "GitHub_email_address_here"
-
-git config --list
-
 //Initial stage
 git init
 git add .
