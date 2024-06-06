@@ -7,6 +7,6 @@ git remote add origin https://github.com/pradeep1001/Task_Learning_FSD60_2nd_App
 git push -u origin main
 
 //update
-git add.
+git add .
 git commit -m "few more added"
 git push
