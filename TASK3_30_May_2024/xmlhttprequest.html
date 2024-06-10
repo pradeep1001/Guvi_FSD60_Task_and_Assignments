@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <body>
+    <script>
+ var req = new XMLHttpRequest()
+ req.open('GET','https://restcountries.com/v3.1/all')
+
+ req.send()
+
+ console.log(req.response)
+
+ req.onload=function()
+ {
+    var data = JSON.parse(req.response)
+    console.log(data)
+    
+    // for(var i=0;i<data.length;i++)
+    // {
+    //     console.log("The area of "+ data[i].name.common+" country is "+data[i].area);
+    // }
+    for(var i=0;i<data.length;i++)
+    {
+        console.log("The flag for "+ data[i].name.common+" country is "+ data[i].flags.png);
+    }   
+    for(var i=0;i<data.length;i++)
+    {
+        console.log(`The region, sub-region and population of country ${data[i].name.common} are ${data[i].region} , ${data[i].subregion} and ${data[i].population}`);
+    }  
+//     for(var element of data){
+// console.log("The area of "+ element.name.common+" Country is "+element. area)
+//  }
+}
+
+</script>
+    
+</body>
+
+</html>

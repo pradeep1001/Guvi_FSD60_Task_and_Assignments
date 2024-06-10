@@ -1,0 +1,117 @@
+1)Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP/1.1 and HTTP/2 are two different versions of the Hypertext Transfer Protocol (HTTP) used for communication between web browsers and servers.
+Main differences between HTTP/1.1 and HTTP/2:
+
+1. Multiplexing:
+   - HTTP/1.1: Uses a single connection per request-response cycle. Each request requires a separate TCP connection, which can lead to higher latency and slower performance.
+   - HTTP/2: Introduces multiplexing, allowing multiple requests and responses to be sent over a single TCP connection simultaneously. This reduces latency and improves performance.
+
+2. Header Compression:
+   - HTTP/1.1: Headers are sent in plain text format for each request and response, resulting in increased overhead and bandwidth usage.
+   - HTTP/2: Uses header compression (HPACK) to compress headers, reducing the amount of data transmitted and improving efficiency.
+
+3. Server Push:
+   - HTTP/1.1: The server can only respond to requests initiated by the client.
+   - HTTP/2: Introduces server push, allowing the server to proactively send resources to the client before they are requested. This can improve performance by reducing the number of round trips required to load a web page.
+
+4. Binary Protocol:
+   - HTTP/1.1: Uses a text-based protocol, where requests and responses are sent as human-readable text.
+   - HTTP/2: Uses a binary protocol, where requests and responses are sent as binary data. This makes the protocol more efficient and less error-prone.
+
+5. Prioritization:
+   - HTTP/1.1: Does not have built-in prioritization mechanisms. Requests are processed in the order they are received.
+   - HTTP/2: Allows for request prioritization, enabling the client to specify the relative importance of requests. This allows critical resources to be loaded first, improving the perceived performance of web pages.
+
+6. Security:
+   - HTTP/1.1: Supports both unencrypted (HTTP) and encrypted (HTTPS) connections.
+   - HTTP/2: Requires the use of HTTPS encryption by default, enhancing security and privacy.
+
+7. Compatibility:
+   - HTTP/1.1: Widely supported by browsers and servers and is the default protocol used by most web applications.
+   - HTTP/2: Requires support from both the browser and the server. Most modern browsers and servers support HTTP/2, but older systems may not have built-in support.
+
+ Major differences:
+1) Accessing websites with Http/2 protocol is significantly faster than Http/1.1 for the same internet connection. 
+2) Overall, HTTP/2 aims to address the limitations of HTTP/1.1 by improving performance, reducing latency, and enhancing security.
+ It introduces new features like multiplexing, header compression, server push, and prioritization to optimize the communication between browsers and servers, resulting in faster and more efficient web browsing experiences.
+---------------------------------------------------------------------------------------------------------------------
+ 2)Write a blog about objects and its internal representation in Javascript
+ 
+ In JavaScript, objects are a fundamental data type used to store collections of key-value pairs. They provide a way to organize and structure related data and functionality. Here's a brief explanation of objects and their internal representation in JavaScript:
+
+1. Object Literal Notation:
+   - Objects can be created using the object literal notation, which consists of curly braces '{}' enclosing a comma-separated list of key-value pairs.
+   - Keys are strings (property names) and values can be of any data type, including primitives, objects, or functions.
+   - Example: const person = { name: "John", age: 30, city: "New York" };
+
+2. Object Properties:
+   - Each key-value pair in an object is called a property.
+   - Properties can be accessed using dot notation (`object.property`) or bracket notation (`object["property"]`).
+   - Property values can be retrieved or modified using these notations.
+
+3. Internal Representation:
+   - Internally, objects in JavaScript are implemented as a collection of properties, which are stored as key-value pairs.
+   - Each property has a unique key (property name) that is used to access its corresponding value.
+   - The keys are internally stored as strings, even if they are written without quotes in the object literal notation.
+   - The values are stored directly alongside their respective keys in the object's memory.
+
+4. Dynamic Nature:
+   - JavaScript objects are dynamic, meaning properties can be added, modified, or deleted at runtime.
+   - New properties can be added to an object simply by assigning a value to a new key using dot or bracket notation.
+   - Properties can be deleted using the `delete` operator.
+
+5. Object Methods:
+   - Objects can also contain functions as property values, which are then called methods.
+   - Methods are invoked using dot notation followed by parentheses, e.g., `object.method()`.
+   - Inside a method, the `this` keyword refers to the object on which the method is called, allowing access to other properties of the object.
+
+6. Prototypal Inheritance:
+   - JavaScript uses a prototypal inheritance model, where objects can inherit properties and methods from other objects.
+   - Each object has an internal link to its prototype object, forming a prototype chain.
+   - Properties and methods defined on the prototype are shared among all instances of the object.
+   - The Object.create() method is used to create a new object with a specified prototype.
+
+7. Built-in Objects:
+   - JavaScript provides several built-in objects, such as `Array`, `Date`, `Math`, `String`, etc., which have predefined properties and methods.
+   - These objects serve as blueprints for creating instances of those types and provide useful functionality out of the box.
+
+Objects in JavaScript are versatile and widely used for organizing and manipulating data.
+ They form the basis for many design patterns and are fundamental to object-oriented programming in JavaScript.
+ 
+-----------------------------------------------------------------------------------------------------------------------
+4)Read about IP address, port, HTTP methods, MAC address:
+
+1. IP Address:
+   - An IP (Internet Protocol) address is a unique numerical identifier assigned to each device connected to a computer network that uses the Internet Protocol for communication.
+   - It serves as a logical address that enables devices to communicate with each other over the internet or a local network.
+   - There are two main versions of IP addresses: IPv4 (32-bit) and IPv6 (128-bit).
+   - Example: `192.168.0.1` (IPv4) or `2001:0db8:85a3:0000:0000:8a2e:0370:7334` (IPv6).
+
+2. Port Number:
+   - A port number is a 16-bit integer that identifies a specific process or application running on a device.
+   - It is used in combination with an IP address to establish a communication endpoint for network protocols such as TCP and UDP.
+   - Port numbers range from 0 to 65535, with well-known ports (0-1023) reserved for standard services like HTTP (port 80), HTTPS (port 443), FTP (port 21), etc.
+   - Example: When accessing a website using `http://example.com:8080`, the port number `8080` is explicitly specified.
+
+3. HTTP Methods:
+   - HTTP (Hypertext Transfer Protocol) methods, also known as HTTP verbs, define the action to be performed on a resource when making an HTTP request.
+   - Common HTTP methods include:
+     - GET: Retrieves a resource from the server.
+     - POST: Submits data to be processed by the server.
+     - PUT: Updates an existing resource on the server.
+     - DELETE: Deletes a specified resource from the server.
+     - PATCH: Partially modifies an existing resource on the server.
+   - Other methods like HEAD, OPTIONS, and TRACE are also part of the HTTP specification.
+
+4. MAC Address:
+   - A MAC (Media Access Control) address is a unique identifier assigned to a network interface card (NIC) by the manufacturer.
+   - It is used to identify devices at the data link layer (Layer 2) of the OSI model.
+   - MAC addresses are 48 bits long and are typically represented as six groups of two hexadecimal digits separated by colons or hyphens.
+   - Example: `00:11:22:33:44:55` or `00-11-22-33-44-55`.
+   - MAC addresses are primarily used for communication within a local network segment and are not directly used for routing over the internet.
+
+ Summary:
+- IP addresses and port numbers are essential for network communication and identifying specific devices and services.
+- HTTP methods define the actions to be performed on resources in web-based systems.
+- MAC addresses are used for unique identification of devices within a local network segment.

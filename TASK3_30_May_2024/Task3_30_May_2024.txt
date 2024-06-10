@@ -1,0 +1,74 @@
+1)
+
+let obj1 = { name: "Person 1", age: 5 };
+let obj2 = { age: 5, name: "Person 1" };
+
+function compareObjects(obj1, obj2) {
+  // Get the property names of both objects
+  let props1 = Object.keys(obj1);
+  let props2 = Object.keys(obj2);
+
+  // Check if the number of properties is different
+  if (props1.length !== props2.length) {
+    return false;
+  }
+
+  // Iterate over the properties of obj1
+  for (let prop of props1) {
+    // Check if obj2 has the same property
+    if (!obj2.hasOwnProperty(prop)) {
+      return false;
+    }
+
+    // Check if the property values are equal
+    if (obj1[prop] !== obj2[prop]) {
+      return false;
+    }
+  }
+
+  // If all properties match, the objects are equal
+  return true;
+}
+
+// Compare obj1 and obj2
+if (compareObjects(obj1, obj2)) {
+  console.log("The JSON objects are equal.");
+} else {
+  console.log("The JSON objects are not equal.");
+}
+--------------------------------------------------------
+2)Answer for Question 2 and 3 is:
+ 
+ <!DOCTYPE html>
+<html lang="en"> 
+    <body>
+    <script>
+ var req = new XMLHttpRequest()
+ req.open('GET','https://restcountries.com/v3.1/all')
+
+ req.send()
+
+ console.log(req.response)
+
+ req.onload=function()
+ {
+    var data = JSON.parse(req.response)
+    console.log(data)
+    
+   
+    for(var i=0;i<data.length;i++)
+    {
+        console.log("The flag for "+ data[i].name.common+" country is "+ data[i].flags.png);
+    }   
+    for(var i=0;i<data.length;i++)
+    {
+        console.log(`The region, sub-region and population of country ${data[i].name.common} are ${data[i].region} , ${data[i].subregion} and ${data[i].population}`);
+    }  
+
+}
+
+</script>
+    
+</body>
+
+</html>
