@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <body>
+    <script>
+ var req = new XMLHttpRequest()
+ req.open('GET','https://restcountries.com/v3.1/all')
+
+ req.send()
+
+ console.log(req.response)
+
+ req.onload=function()
+ {
+    var data = JSON.parse(req.response)
+    console.log(data)
+    
+    var arr1 = data.filter((item,index)=> item.region == "Asia")
+    for(var i=0;i<arr1.length;i++)
+    {
+       console.log(`Country from Asia continent/region is ${arr1[i].name.common}`)
+    }
+
+    var arr2 = data.filter((item,index)=> item.population < 200000)
+   for(var i=0;i<arr2.length;i++)
+    {
+       console.log(`Country with a population of less than 2 lakhs is ${arr2[i].name.common}`)
+    }
+
+    data.forEach(data => {
+    console.log(`The capital and flag for ${data.name.common} country are ${data.capital} and ${data.flags.png} respectively.`);
+     });  
+
+     var arr3 = data.reduce((acc,num)=> acc + num.population,0)
+   console.log(`Total population of all countries combined is ${arr3}`);
+
+   var arr4 = data.filter((item, index) => {
+    return item.currencies && item.currencies.USD && item.currencies.USD.name === "United States dollar";
+});
+for(var i=0;i<arr4.length;i++)
+{
+    console.log(`Country that uses US dollars as currency is ${arr4[i].name.common}`);
+}
+
+   
+
+}
+
+</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+1) Question1
+ a) 
+   class Movie
+ {
+    constructor(title,studio,rating)
+    {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+ }
+ 
+ d)
+ let film1 = new Movie("Casino Royale","EON Productions","PG13");
+ 
+ b)
+ 
+  class Movie
+ {
+    constructor(title,studio,rating)
+    {
+        this.title = title;
+        this.studio = studio;
+		if(rating == null)
+		{
+         this.rating = "PG";
+        }
+		else
+		{
+		  this.rating=rating;
+		}
+    }
+ }
+ 
+ c)
+ 
+ class Movie
+ {
+    constructor(title,studio,rating)
+    {
+        this.title = title;
+        this.studio = studio;
+		if(rating == null)
+		{
+         this.rating = "PG";
+        }
+		else
+		{
+		  this.rating=rating;
+		}
+    }
+	getPg(inputArray)
+    {
+        let result = [];
+        for(let c of inputArray)
+            {
+                if(c.rating =="PG")
+                    {
+                        result.push(c);
+                    }
+            }
+            return result;
+    }
+ }
+ ---------------------------------------------
+ Complete Code:
+ 
+ class Movie
+{
+    constructor(title,studio,rating)
+    {
+        this.title = title;
+        this.studio = studio;
+        if(rating==null || rating==undefined)
+            {
+                this.rating = "PG";
+            }
+            else
+            {
+                this.rating = rating;
+            }
+    }
+    getPg(inputArray)
+    {
+        let result = [];
+        for(let c of inputArray)
+            {
+                if(c.rating =="PG")
+                    {
+                        result.push(c);
+                    }
+            }
+            return result;
+    }
+}
+let film1 = new Movie("Casino Royale","EON Productions","PG13");
+let film2 = new Movie("Casino Royale","EON Productions","PG13")
+let film3 = new Movie("xyz", "xyz House");
+let film4 = new Movie("Sivaji", "xyz House","PG14");
+let film5 = new Movie("007", "Disney","PG10");
+let film6 = new Movie("Oppenhiemer", "MGM");
+let film7 = new Movie("Billa","AVM");
+let film8 = new Movie();
+let array1 = [film1,film2,film3,film4,film5,film6,film7];
+let resultPg = film8.getPg(array1);
+for(let c of resultPg)
+    {
+        console.log(`This movie ${c.title} was produced by ${c.studio} and it has a rating of ${c.rating}`);
+    }
+2) Question2
+class Circle {
+  constructor(radius , color) 
+  {
+   if (radius == null || radius==undefined && color ==null || color==undefined) 
+	{
+      this.radius = 1.0;
+      this.color = "red";
+    } else if (typeof radius === "number" && color === undefined) {
+      this.radius = radius;
+      this.color = "red";
+    } else if (typeof radius === "number" && typeof color === "string") {
+      this.radius = radius;
+      this.color = color;
+    }
+  }
+
+  getRadius() {
+    return this.radius;
+  }
+
+  setRadius(radius) {
+    this.radius = radius;
+  }
+
+  getColor() {
+    return this.color;
+  }
+
+  setColor(color) {
+    this.color = color;
+  }
+
+  toString() {
+    return `Circle[radius=${this.radius},color=${this.color}]`;
+  }
+
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+
+  getCircumference() {
+    return 2 * Math.PI * this.radius;
+  }
+}
+
+
+const circle1 = new Circle();
+console.log(circle1.toString()); // Output: Circle[radius=1,color=red]
+
+const circle2 = new Circle(2.5, "blue");
+console.log(circle2.getArea()); // Output: 19.634954084936208
+console.log(circle2.getCircumference()); // Output: 15.707963267948966
+
+3) Question3
+
+class Person {
+    constructor(name , age , education) 
+    {
+        if ((name == null || name == undefined || name == '') && 
+        (age == null || age == undefined || age == '') ) {
+      this.name = "Pradeep";
+      this.age = "29";
+      this.education=education;
+    } else if (typeof name === "number" && age === undefined) {
+      this.name = name;
+      this.age = "18";
+      this.education = "";
+    } else if (typeof name === "string" && typeof age === "number" && typeof education === "string") {
+      this.name = name;
+      this.age = age;
+      this.education = education;
+    }
+    }
+  
+    getname() {
+      return this.name;
+    }
+  
+    setname(name) {
+      this.name = name;
+    }
+  
+    getage() {
+      return this.age;
+    }
+  
+    setage(age) {
+      this.age = age;
+    }
+    
+    geteducation() {
+      return this.education;
+    }
+  
+    seteducation(education) {
+      this.education = education;
+    }
+  
+    toString() {
+      return `Person[name=${this.name},age=${this.age},education=${this.education}]`;
+    }
+  
+    
+  }
+
+const person1 = new Person("","","B.E Computer Science and Engineering");
+console.log(person1.toString()); //Person[name=Pradeep,age=29,education=B.E Computer Science and Engineering]
+
+const person2 = new Person("Teja",30,"MBA");
+console.log(person2.toString()); //Person[name=Teja,age=30,education=MBA]
+4) Question4
+
+ Class in JavaScript that calculates the Uber price based on the distance and time traveled:
+
+Answer:
+
+class UberCalculator {
+    constructor(baseFare, perKilometer, perMinute) {
+      this.baseFare = baseFare;
+      this.perKilometer = perKilometer;
+      this.perMinute = perMinute;
+    }
+  
+    calculate(distance, time) {
+      const distanceFare = distance * this.perKilometer;
+      const timeFare = time * this.perMinute;
+      const totalFare = this.baseFare + distanceFare + timeFare;
+      return totalFare.toFixed(2);
+    }
+  }
+  
+  
+  const uberCalculator = new UberCalculator(2.5, 1.5, 0.2);
+  
+  const distance = 10; // Distance traveled in Kilometer
+  const time = 20; // Time traveled in minutes
+  
+  const fare = uberCalculator.calculate(distance, time);
+  console.log(`The Uber fare is ${fare}`);
+
+
+In this example, the "UberCalculator" class has a constructor that takes three parameters:
+- "baseFare": The base fare charged for every ride (e.g. $2.5)
+- "perkilometer": The fare charged per kilometer traveled (e.g., $1.5/kilometer)
+- "perMinute": The fare charged per minute of the ride (e.g., $0.2/minute)
+
+The class has a calculate method that takes the distance traveled in Kilometer and the time traveled in minutes as parameters. It calculates the fare based on the following formula:
+
+
+totalFare = baseFare + (distance * perkilometer) + (time * perMinute)
+
+
+
+In this example we have created an instance of the UberCalculator class with specific values for the base fare, per  fare, and per minute fare. We then provide the distance and time values and call the "calculate" method to get the total Uber fare.
+
+Output:
+
+The Uber fare is $20.50
