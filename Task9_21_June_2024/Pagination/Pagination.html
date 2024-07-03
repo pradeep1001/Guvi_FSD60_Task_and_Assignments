@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .pagination {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pagination li {
+            margin: 0 2px;
+        }
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid #ddd; 
+            /* border-right: 1px solid #ddd; */
+            /* border: 1px solid #ddd; */
+            background-color: white;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background-color: #f0f0f0;
+        }
+        .pagination button.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        #content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Pagination Example</h1>
+        <p id="description">Demo of pagination example.</p>
+        <div class="table-responsive">
+            <table id="content" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="buttons" class="d-flex justify-content-center">
+          <ul id="pagination" class="pagination"></ul>
+        </div>
+      </div>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+   <script src="./script.js"> </script>
+
+</body>
+</html>
