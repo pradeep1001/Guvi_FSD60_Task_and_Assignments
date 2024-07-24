@@ -1,0 +1,9 @@
+.footer-wrapper{
+    width: 100%;
+    background: #212529;
+    height: 150px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

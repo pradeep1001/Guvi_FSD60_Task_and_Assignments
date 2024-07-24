@@ -1,0 +1,87 @@
+.card-container {
+    height: 360px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    border: 1px solid #d2d2d2;
+    position: relative;
+}
+
+.image-container {
+    height: 180px;
+    width: 100%;
+    background: #dee1e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container p {
+    font-size: 32px;
+    color: #74777c;
+    font-weight: 300;
+}
+
+.content-container {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffc107;
+}
+
+.content-container .btn {
+    padding: 5px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.content-container .btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+    .card-container {
+        height: 350px;
+        max-width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .content-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.sale{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: 500;
+}
