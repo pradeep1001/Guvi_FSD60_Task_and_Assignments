@@ -1,6 +1,5 @@
 const mongoose=require('mongoose')
 
-//mongodb+srv://Pradeep10:Pradeep10@cluster0.ebamqsj.mongodb.net/fsd60wd_01_mongoose
 //mongoose.connect('mongodb://127.0.0.1:27017/fsd60wd_01_mongoose')
 // mongodb >> doesnt create empty database
 // create db >> u need to have collection
