@@ -1,0 +1,56 @@
+1) teacher table:
+"teacher": {
+    "_id": "ObjectId",
+	"teacher_id": Number
+    "teacher_name": "String",
+    "batches": [
+      {
+        "batch_code": "String",
+        "batch_name": "String",
+        "batch_status": "String"
+      }
+    ]
+  }
+
+----------------------------------------------------
+2) Inserting values into the table "teacher"
+
+db.teacher.insertMany([
+  {
+    "teacher_id": 1,
+    "teacher_name": "Poonam",
+    "batches": [
+      {
+        "batch_code": "FSD60WD",
+        "batch_name": "Full Stack Development Batch 1",
+        "batch_status": "Active"
+      },
+      {
+        "batch_code": "B42WDEng",
+        "batch_name": "Full Stack Development Batch 2",
+        "batch_status": "Completed"
+      },
+      {
+        "batch_code": "B40WDEng",
+        "batch_name": "Full Stack Development Batch 3",
+        "batch_status": "Upcoming"
+      },
+      {
+        "batch_code": "B51WDEng_JavaScript",
+        "batch_name": "Javascript Batch 1",
+        "batch_status": "Active"
+      }
+    ]
+  },
+  {
+    "teacher_id": 2,
+    "teacher_name": "Marget",
+    "batches": [
+      {
+        "batch_code": "FSD60WD",
+        "batch_name": "Full Stack Development Batch 1",
+        "batch_status": "Active"
+      }
+    ]
+  }
+])

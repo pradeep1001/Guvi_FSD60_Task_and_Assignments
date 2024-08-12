@@ -1,0 +1,66 @@
+1) Creating a table and finding the values available in that table:
+
+   a)db.createCollection("Students") - creates a new Collection called Students
+
+   b)db.Students.find() - used to find the documents in the Students Collection
+
+   c) show collections - used to find the collections available in a particular database
+
+ 2) Similarly we can create teacher and placement_coordinator table
+ 
+   a) db.createCollection("teacher")
+
+   b) db.createCollection("placement_coordinator")
+----------------------------------------------------------------------------------------------------
+ 3)Students Table Schema:
+ 
+"Students": {
+    "_id": "ObjectId",
+	"student_id" : "Number",
+    "student_name": "String",
+    "batch_code": "String",
+    "mentor_name": "String",
+    "tasks": [
+      {
+        "task_name": "String",
+        "status": "String",
+        "mark": "Number"
+      }
+    ],
+    "placement_eligible": "Boolean"
+  }
+
+
+----------------------------------------------------
+4) teacher Table schema:
+
+"teacher": {
+    "_id": "ObjectId",
+	"teacher_id": Number
+    "teacher_name": "String",
+    "batches": [
+      {
+        "batch_code": "String",
+        "batch_name": "String",
+        "batch_status": "String"
+      }
+    ]
+  }
+
+-------------------------------------------------------
+5)placement_coordinator table :
+  
+  
+  "placement_coordinator": {
+    "_id": "ObjectId",
+	"coordinator_id": "Number",
+    "coordinator_name": "String",
+    "batches": [
+      {
+        "batch_code": "String",
+        "batch_name": "String",
+        "eligible_students_count": "Number",
+        "placed_students_count": "Number"
+      }
+    ]
+  }

@@ -1,0 +1,38 @@
+db.placement_coordinator.insertMany([
+  {
+    coordinator_id:  1,
+    coordinator_name: "Faziya",
+    batches: [
+      {
+        batch_code: "FSD60WD",
+        batch_name: "Full Stack Development Batch 60",
+        eligible_students_count: 25,
+        placed_students_count: 20
+      },
+      {
+        batch_code: "B51WDEng_JavaScript",
+        batch_name: "Javascript Batch 42",
+        eligible_students_count: 30,
+        placed_students_count: 28
+      }
+    ]
+  },
+  {
+    coordinator_id: 2,
+    coordinator_name: "Rekha",
+    batches: [
+      {
+        batch_code: "FSD61WD",
+        batch_name: "Full Stack Development Batch 61",
+        eligible_students_count: 28,
+        placed_students_count: 22
+      },
+      {
+        batch_code: "B42WDEng",
+        batch_name: "UI/UX Design Batch 15",
+        eligible_students_count: 20,
+        placed_students_count: 18
+      }
+    ]
+  }
+])

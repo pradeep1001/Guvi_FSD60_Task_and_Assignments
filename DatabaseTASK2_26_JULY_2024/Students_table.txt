@@ -1,0 +1,110 @@
+1) Students Table: 
+
+"Students": {
+    "_id": "ObjectId",
+	"student_id" : "Number",
+    "student_name": "String",
+    "batch_code": "String",
+    "mentor_name": "String",
+    "tasks": [
+      {
+        "task_name": "String",
+        "status": "String",
+        "mark": "Number"
+      }
+    ],
+    "placement_eligible": "Boolean"
+  }
+
+2) Inserting values into Students table:
+db.Students.insertMany([
+  {
+    student_id: 1,
+    student_name: 'Pradeep',
+    batch_code: 'B001',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 1', status: 'Completed', mark: 85 } ],
+    placement_eligible: true
+   
+  },
+  {
+    student_id: 2,
+    student_name: 'Jeevan Kumar',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 2', status: 'Completed', mark: 83 } ],
+    placement_eligible: true,
+   
+  },
+  {
+    student_id: 3,
+    student_name: 'Preethi',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 3', status: 'Completed', mark: 90 } ],
+    placement_eligible: true
+   
+  },
+  {
+    student_id: 4,
+    student_name: 'Jason Thomas',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Marget',
+    tasks: [ { task_name: 'Task 4', status: 'Completed', mark: 80 } ],
+    placement_eligible: false
+  },
+  {
+    student_id: 5,
+    student_name: 'Jason Thomas',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 5', status: 'Completed', mark: 80 } ],
+    placement_eligible: false
+   
+  },
+  {
+    student_id: 6,
+    student_name: 'Emily Johnson',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 6', status: 'Completed', mark: 95 } ],
+    placement_eligible: true
+    
+  },
+  {
+    student_id: 7,
+    student_name: 'Michael Lee',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 7', status: 'Completed', mark: 75 } ],
+    placement_eligible: true
+   
+  },
+  {
+     student_id: 8,
+    student_name: 'Sarah Rodriguez',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 8', status: 'Completed', mark: 88 } ],
+    placement_eligible: true
+    
+  },
+  {
+    student_id: 9,
+    student_name: 'David Kim',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Poonam',
+    tasks: [ { task_name: 'Task 9', status: 'Completed', mark: 70 } ],
+    placement_eligible: false
+    
+  },
+  {
+    student_id: 10,
+    student_name: 'Aakash',
+    batch_code: 'FSD60WD',
+    mentor_name: 'Marget',
+    tasks: [ { task_name: 'Task 10', status: 'Completed', mark: 70 } ],
+    placement_eligible: false
+    
+  }
+])
