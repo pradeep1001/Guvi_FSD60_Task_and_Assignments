@@ -1,0 +1,87 @@
+{
+  "all": [
+    {
+      "id": 1,
+      "title": "Python Objects 101: How to",
+      "image": "https://i.imgur.com/WjBF7D4.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Machine Learning Must-Know Concepts",
+      "image":"https://i.imgur.com/uU2ajvK.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Unlocking the Power of NLP",
+      "image": "https://i.imgur.com/eQzS4Rs.jpg"
+    }
+  ],
+  "FullStackDevelopment": [
+    {
+      "id": 1,
+      "title": "Top 10 Full-Stack Developer Frameworks in 2024",
+      "image": "https://i.imgur.com/Ngz6U3c.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Hot Topics That You Need To Know In Full Stack Developer Syllabus | 2024 [UPDATED]",
+      "image": "https://i.imgur.com/RJOuDOb.jpg"
+    },
+    {
+      "id": 3,
+      "title": "6 Essential Prerequisites For Learning ReactJS",
+      "image": "https://i.imgur.com/dtOCdbX.jpg"
+    }
+  ],
+  "DataScience": [
+    {
+      "id": 1,
+      "title": "Top 100+ Manual Testing Interview Questions and Answers",
+      "image": "https://i.imgur.com/0zIfDLj.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The 8 Essential Skills for a Successful Automation Tester",
+      "image": "https://i.imgur.com/oxNR4a8.jpg"
+    },
+    {
+      "id": 3,
+      "title": "7 Best Automation Testing Project Ideas",
+      "image": "https://i.imgur.com/4ldId9e.jpg"
+    }
+  ],
+  "CyberSecurity": [
+    {
+      "id": 1,
+      "title": "What Is Hacking? Types of Hacking & More",
+      "image": "https://i.imgur.com/Cm6atIz.jpg"
+    },
+    {
+      "id": 2,
+      "title": "8 Different Types of Cybersecurity and Threats Involved",
+      "image": "https://i.imgur.com/Ju1OeAd.jpg"
+    },
+    {
+      "id": 3,
+      "title": "What is Cybersecurity? Importance and its uses & the growing challenges in 2023!",
+      "image": "https://i.imgur.com/NsKLXrV.jpg"
+    }
+  ],
+  "Career": [
+    {
+      "id": 1,
+      "title": "Top 10 UI/UX Project Ideas for Beginners",
+      "image": "https://i.imgur.com/VzHpZ7J.jpg"
+    },
+    {
+      "id": 2,
+      "title": "10 Best Skills Required to Become a UI/UX Designer",
+      "image": "https://i.imgur.com/78GnwLO.jpg"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Syllabus | Complete Curriculum 2024",
+      "image": "https://i.imgur.com/xABcMtW.jpg"
+    }
+  ]
+}
