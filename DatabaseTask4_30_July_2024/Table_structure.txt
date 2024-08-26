@@ -1,0 +1,13 @@
+users -> _id, username, Batch_code,mentor_name, tasks_completed, grade , status
+
+codekata -> _id ,userid,user_name,topic_name, number_of_questions_answered
+
+attendance -> _id, user_id, user_name, classes_attended, Total_number_of_classes, attendance_percentage
+
+topics -> _id,topic_code,topic_name,category,description,prerequisites,associated_tasks,batch_codes
+
+tasks -> _id, task_name, task_desc,student_id,student_name, status, grade, task_start_date, task_completion_date
+
+companydrives -> _id, company_name,job_id,job_desc, number_of_students_recruited, TotalStudents_Attended , package_per_annum
+
+mentors -> _id, mentor_name, batch_code, Total_Number_of_students, status
